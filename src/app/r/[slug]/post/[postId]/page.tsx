@@ -18,8 +18,8 @@ interface SubredditPostPageProps {
   };
 }
 
-// export const dynamic = 'force-dynamic'
-// export const fetchCache = 'force-no-store'
+ export const dynamic = 'force-dynamic'
+ export const fetchCache = 'force-no-store'
 
 const SubredditPostPage = async ({ params }: SubredditPostPageProps) => {
   const cachedPost = (await redis.hgetall(
