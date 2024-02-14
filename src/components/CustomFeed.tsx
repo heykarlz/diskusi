@@ -19,7 +19,7 @@ const GeneralFeed = async () => {
     where: {
       subreddit: {
         name: {
-          in: followedCommunities.map((subreddit) => subreddit.id),
+          in: followedCommunities.map((sub) => sub.subreddit.name),
         },
       },
     },
