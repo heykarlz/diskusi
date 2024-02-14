@@ -52,7 +52,6 @@ const CommentsSection = async ({ postId }: CommentsSectionProps) => {
             return (
               <div key={topLevelComment.id} className="flex flex-col">
                 <div className="mb-2">
-                  {/* @ts-expect-error server-component*/}
                   <PostComment
                     postId={postId}
                     votesAmt={topLevelCommentVotesAmt}
