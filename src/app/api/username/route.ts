@@ -1,3 +1,4 @@
+import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { UsernameValidator } from "@/lib/validators/username";
 import { getSession } from "next-auth/react";
@@ -5,7 +6,7 @@ import { z } from "zod";
 
 export async function PATCH(req: Request) {
   try {
-    const session = await getSession();
+    const session = await getAuthSession();
 
     if (!session?.user) {
       return new Response("Unauthorized", { status: 401 });
